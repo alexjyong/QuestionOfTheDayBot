@@ -22,9 +22,9 @@ jobs:
       id: cache-used-questions
       with:
         path: usedQuestions.json
-        key: used-questions-${{ runner.os }}-${{ hashFiles('**/usedQuestions.json') }}
-        restore-keys: |
-          used-questions-${{ runner.os }}-
+        key: used-questions-${{ runner.os }}
+    - name: Display usedQuestions.json
+      run: cat usedQuestions.json || echo "No used questions yet"
     - name: Run QOTD Script
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
@@ -34,4 +34,4 @@ jobs:
       uses: actions/cache@v3
       with:
         path: usedQuestions.json
-        key: used-questions-${{ runner.os }}-${{ hashFiles('**/usedQuestions.json') }}
+        key: used-questions-${{ runner.os }}
