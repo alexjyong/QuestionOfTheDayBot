@@ -16,7 +16,7 @@ jobs:
       with:
         python-version: '3.x'
     - name: Install dependencies
-      run: pip install python-dotenv
+      run: pip install python-dotenv requests
     - name: Restore Cache
       uses: actions/cache@v3
       id: cache-used-questions
