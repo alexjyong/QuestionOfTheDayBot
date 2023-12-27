@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: pip install python-dotenv
     - name: Restore Cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       id: cache-used-questions
       with:
         path: usedQuestions.json
@@ -31,7 +31,7 @@ jobs:
       run: python qotd.py
     - name: Update Cache
       if: steps.cache-used-questions.outputs.cache-hit != 'true'
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: usedQuestions.json
         key: used-questions-${{ runner.os }}-${{ hashFiles('**/usedQuestions.json') }}
