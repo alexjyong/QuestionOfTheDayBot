@@ -1,13 +1,20 @@
 import requests
 import json
 import random
+from datetime import datetime  # Import the datetime module
 
-# Replace 'YOUR_WEBHOOK_URL' with the actual URL of the webhook
-webhook_url = 'YOUR_WEBHOOK_URL'
+webhook_url = 'REDACTED' #make this an argument later
 
-# Load questions from the JSON file
-with open('questionsList.json', 'r') as json_file:
-    data = json.load(json_file)
+# Try to load questions from the JSON file
+try:
+    with open('questionsList.json', 'r') as json_file:
+        data = json.load(json_file)
+except FileNotFoundError:
+    print("The questionsList.json file was not found.")
+    exit(1)
+except json.JSONDecodeError:
+    print("Error decoding JSON from the file.")
+    exit(1)
 
 # Extract the list of questions
 questions = data.get('questions', [])
@@ -25,7 +32,7 @@ embed = {
     "title": "Question of the Day",
     "description": random_question,
     "color": 0x00ff00,  # Green color
-    "timestamp": str(datetime.datetime.utcnow()),  # UTC timestamp
+    "timestamp": str(datetime.utcnow()),  # Corrected UTC timestamp
     "footer": {
         "text": "Discord QOTD Bot"
     }
@@ -36,12 +43,12 @@ payload = {
     "embeds": [embed]
 }
 
-# Send the POST request to the webhook URL
-response = requests.post(webhook_url, json=payload)
-
-# Check the response status code
-if response.status_code == 200:
+# Send the POST request to the webhook URL with error handling
+try:
+    response = requests.post(webhook_url, json=payload)
+    response.raise_for_status()  # Raises HTTPError for bad requests
     print("Random question successfully posted to the webhook.")
-else:
-    print(f"Failed to post the random question. Status code: {response.status_code}")
-    print(response.text)
+except requests.exceptions.HTTPError as http_err:
+    print(f"HTTP error occurred: {http_err}")
+except requests.exceptions.RequestException as err:
+    print(f"Error occurred: {err}")
