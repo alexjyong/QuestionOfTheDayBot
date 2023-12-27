@@ -46,7 +46,7 @@ embed = {
     "color": 0x00ff00,
     "timestamp": str(datetime.utcnow()),
     "footer": {
-        "text": "Ajyong's QOTD Bot"
+        "text": "Alex's QOTD Bot"
     }
 }
 
