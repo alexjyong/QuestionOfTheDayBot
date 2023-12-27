@@ -20,9 +20,20 @@ if not questions:
 # Choose a random question
 random_question = random.choice(questions)
 
-# Create a dictionary for the payload
+# Create an embed for the message
+embed = {
+    "title": "Question of the Day",
+    "description": random_question,
+    "color": 0x00ff00,  # Green color
+    "timestamp": str(datetime.datetime.utcnow()),  # UTC timestamp
+    "footer": {
+        "text": "Discord QOTD Bot"
+    }
+}
+
+# Create the payload with the embed
 payload = {
-    "content": f"**Random Question:**\n{random_question}"
+    "embeds": [embed]
 }
 
 # Send the POST request to the webhook URL
