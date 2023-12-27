@@ -1,4 +1,5 @@
 What’s one book you think everyone should read?
+What is a pet peeve you have that you know doesn't make sense, but you have it anyways?
 If you could travel anywhere in the world, where would it be?
 What’s your favorite hobby or pastime?
 If you could have dinner with any historical figure, who would it be and why?
@@ -75,6 +76,36 @@ What’s a mystery or phenomenon you’d love to solve?
 If you could collaborate with any artist (dead or alive), who would it be?
 What’s one law you would create or change?
 If you could talk to animals, which species would you converse with first?
+What’s a local spot in your city or town that you love to visit?
+What’s a random act of kindness you’ve either experienced or want to do?
+What’s your favorite comfort food and why?
+If you could learn any new skill in an instant, what would it be?
+What’s a movie or show that always makes you laugh?
+What’s a childhood memory that brings you joy?
+What’s your favorite way to spend time outdoors?
+What’s something you’re currently excited about?
+What’s a piece of advice you would give to someone starting in your career field?
+What’s an interesting tradition or custom you have with friends or family?
+What’s a hobby that helps you relax?
+What’s the best part about your daily routine?
+What’s a song that brings back memories, and what does it remind you of?
+What’s one thing you’ve always wanted to do but haven’t gotten around to?
+What’s your favorite way to exercise or stay active?
+What’s something you thought you’d never do but ended up enjoying?
+What’s the most interesting documentary you’ve ever watched?
+What’s your favorite type of weather and why?
+What’s one thing you wish people knew about you?
+What’s a book or movie that you think is underrated?
+If you could start a new hobby tomorrow, what would it be?
+What’s your favorite family recipe?
+What’s a small decision that made a big impact on your life?
+What’s your favorite way to unwind after a busy day?
+What’s something you love to do that’s also calming?
+What’s an experience that made you see the world differently?
+What’s something that always makes you nostalgic?
+What’s a goal you’ve set for yourself recently?
+What’s your favorite part about the city or town you live in?
+What’s a lesson you learned recently from a challenge or obstacle?
 What’s a book that you think should be turned into a movie?
 If you could experience life as another person for one day, who would you pick?
 What’s an invention that doesn’t exist but should?
@@ -90,7 +121,7 @@ If you could teleport to any place right now, where would you go?
 What’s a food from another country you’ve never tried but want to?
 If you could redesign social media, what feature would you add or remove?
 What’s a subject not taught in schools that should be?
-    What’s a simple thing you can do to brighten someone’s day?
+What’s a simple thing you can do to brighten someone’s day?
 What song or artist do you like to listen to when you need a mood boost?
 What’s one small change you’ve made in your life that had a big impact?
 How do you define a true friendship?
@@ -138,7 +169,7 @@ What’s a simple pleasure that you never get tired of?
 If you could have a chat with any person from your country’s history, who would it be?
 What’s an experience that changed your perspective on something?
 What is your most toxic trait?
-    What do you think is the meaning of life?
+What do you think is the meaning of life?
 Is there such a thing as absolute truth, and if so, how do we find it?
 What does it mean to live a good life?
 How do you define success, and do you think society's definition is different?
