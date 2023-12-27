@@ -6,4 +6,4 @@ WORKDIR /usr/src/bot
 COPY . .
 RUN pip install python-dotenv
 
-CMD [ "python3", "systd.py" ]
+CMD [ "python3", "qotd.py" ]
