@@ -27,9 +27,13 @@ jobs:
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
       run: | 
-       cat usedQuestions.json
-       python qotd.py
-       cat usedQuestions.json
+        if [ -f usedQuestions.json ]; then
+          cat usedQuestions.json
+        else
+          echo "usedQuestions.json does not exist."
+        fi
+        python qotd.py
+        cat usedQuestions.json
     - name: Delete Current Cache
       if: steps.cache-used-questions.outputs.cache-hit == 'true'
       uses: prantlf/delete-cache-action@v2.0.6
