@@ -1,6 +1,6 @@
-# Question of the Day Bot
+# Question of the Day Discord Bot
 
-Question of the Day Bot! Inspired by https://github.com/KevinNovak/QOTD-Bot-Docs and https://github.com/mrrfv/discord-webhook-qotd-bot
+Question of the Day Discord Bot! Inspired by https://github.com/KevinNovak/QOTD-Bot-Docs and https://github.com/mrrfv/discord-webhook-qotd-bot
 
 Set up a webhook on your discord server with [this guide.](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
 Clone this repo onto the server that you plan to run the bot out of. Within the repo, create a `.env` file.
