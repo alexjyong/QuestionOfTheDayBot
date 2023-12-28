@@ -23,13 +23,19 @@ jobs:
       with:
         path: usedQuestions.json
         key: used-questions-${{ runner.os }}
-    - name: Display usedQuestions.json
-      run: cat usedQuestions.json || echo "No used questions yet"
     - name: Run QOTD Script
       env:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-      run: python qotd.py
-    - name: Update Cache
+      run: | 
+       cat usedQuestions.json
+       python qotd.py
+       cat usedQuestions.json
+    - name: Delete Current Cache
+      if: steps.cache-used-questions.outputs.cache-hit == 'true'
+      uses: prantlf/delete-cache-action@v2.0.6
+      with:
+        key: used-questions-${{ runner.os }}
+    - name: Cache New usedQuestions.json
       uses: actions/cache@v3
       with:
         path: usedQuestions.json
