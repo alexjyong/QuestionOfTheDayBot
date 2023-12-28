@@ -1,7 +1,7 @@
 import os
 import json
 import random
-from datetime import datetime
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 import requests
 
@@ -44,7 +44,7 @@ embed = {
     "title": "Question of the Day",
     "description": random_question,
     "color": 0x00ff00,
-    "timestamp": str(datetime.utcnow()),
+    "timestamp": datetime.now(timezone.utc).isoformat(),
     "footer": {
         "text": "Alex's QOTD Bot"
     }
