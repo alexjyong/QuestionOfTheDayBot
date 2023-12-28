@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 14 * * *'  # 10 AM Eastern Time (UTC -4)
 
+permissions:
+  actions: write
+
 jobs:
   run-qotd:
     runs-on: ubuntu-latest
