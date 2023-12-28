@@ -30,7 +30,6 @@ jobs:
         WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
       run: python qotd.py
     - name: Update Cache
-      if: steps.cache-used-questions.outputs.cache-hit != 'true'
       uses: actions/cache@v3
       with:
         path: usedQuestions.json
