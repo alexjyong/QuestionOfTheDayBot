@@ -16,3 +16,5 @@ Then run
 `python3 qotd.py`
 
 This will run the job, read a question from questionsList.json, and add it to usedQuestions.json.  When the number of questions is equal to the used questions, the usedQuestions.json file is nuked, and the bot starts again.
+
+If you are comfortable with Github Actions, go and [fork this repo](https://github.com/alexjyong/QuestionOfTheDayBot/fork), add your webhook url to the secrets section in the settings in the forked repo, and it will automatically post to your server at the time determined by the cron statement in the workflow.  Alternatively, you can manually trigger the job as well from the actions tab. 
