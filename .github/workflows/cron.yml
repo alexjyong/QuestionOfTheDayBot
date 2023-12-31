@@ -3,7 +3,7 @@ name: QOTD Scheduler
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 15 * * *' 
+    - cron: '0 14 * * *' 
 
 permissions:
   actions: write
