@@ -15,6 +15,6 @@ Run `pip install python-dotenv`. Depending on your system, you may or may not ne
 Then run 
 `python3 qotd.py`
 
-This will run the job, read a question from questionsList.json, and add it to usedQuestions.json.  When the number of questions is equal to the used questions, the usedQuestions.json file is nuked, and the bot starts again.
+This will run the job, read a question from questionsList.json, and add it to usedQuestions.json. (Which it will create if it doesn't exist)  When the number of questions is equal to the used questions, the usedQuestions.json file is nuked, and the bot starts again. Ideally, you would want this to run on a timed schedule, so I would advise creating a cron job to run this on a schedule.
 
 If you are comfortable with Github Actions, go and [fork this repo](https://github.com/alexjyong/QuestionOfTheDayBot/fork), add your webhook url to the secrets section in the settings in the forked repo, and it will automatically post to your server at the time determined by the cron statement in the workflow.  Alternatively, you can manually trigger the job as well from the actions tab. 
