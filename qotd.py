@@ -6,8 +6,6 @@ from dotenv import load_dotenv
 import discord
 import asyncio
 
-# Define your existing functions (load_json_file, save_json_file)
-
 # Load environment variables
 load_dotenv()
 bot_token = os.getenv('DISCORD_BOT_TOKEN')  # Bot token from the Discord Developer Portal
@@ -29,10 +27,6 @@ def save_json_file(filename, data):
 
 # Load environment variables
 load_dotenv()
-webhook_url = os.getenv('WEBHOOK_URL')
-if not webhook_url:
-    print("Webhook URL not found.")
-    exit(1)
 
 # Load questions and used questions
 questions = load_json_file('questionsList.json').get('questions', [])
@@ -56,8 +50,11 @@ embed = discord.Embed(
 )
 embed.set_footer(text="Alex's QOTD Bot")
 
-# Discord client
-client = discord.Client()
+# Define the required intents
+intents = discord.Intents.default()
+
+# Discord client with intents
+client = discord.Client(intents=intents)
 
 async def post_question():
     await client.wait_until_ready()
@@ -65,6 +62,10 @@ async def post_question():
     await channel.send(embed=embed)
     await client.close()
 
-client.loop.create_task(post_question())
+@client.event
+async def on_ready():
+    print(f'Logged in as {client.user}')
+    await post_question()
+
 client.run(bot_token)
 
