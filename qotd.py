@@ -3,7 +3,15 @@ import json
 import random
 from datetime import datetime, timezone
 from dotenv import load_dotenv
-import requests
+import discord
+import asyncio
+
+# Define your existing functions (load_json_file, save_json_file)
+
+# Load environment variables
+load_dotenv()
+bot_token = os.getenv('DISCORD_BOT_TOKEN')  # Bot token from the Discord Developer Portal
+channel_id = int(os.getenv('DISCORD_CHANNEL_ID'))  # Channel ID where the bot will post the message
 
 def load_json_file(filename):
     try:
@@ -40,23 +48,23 @@ used_questions.append(random_question)
 save_json_file('usedQuestions.json', used_questions)
 
 # Create an embed for the message
-embed = {
-    "title": "Question of the Day",
-    "description": random_question,
-    "color": 0x00ff00,
-    "timestamp": datetime.now(timezone.utc).isoformat(),
-    "footer": {
-        "text": "Alex's QOTD Bot"
-    }
-}
+embed = discord.Embed(
+    title="Question of the Day",
+    description=random_question,
+    color=0x00ff00,
+    timestamp=datetime.now(timezone.utc)
+)
+embed.set_footer(text="Alex's QOTD Bot")
 
-# Payload with the embed
-payload = {"embeds": [embed]}
+# Discord client
+client = discord.Client()
 
-# Send the POST request to the webhook URL
-try:
-    response = requests.post(webhook_url, json=payload)
-    response.raise_for_status()
-    print("Random question successfully posted to the webhook.")
-except requests.exceptions.RequestException as err:
-    print(f"Error occurred: {err}")
+async def post_question():
+    await client.wait_until_ready()
+    channel = client.get_channel(channel_id)
+    await channel.send(embed=embed)
+    await client.close()
+
+client.loop.create_task(post_question())
+client.run(bot_token)
+
