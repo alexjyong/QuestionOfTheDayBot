@@ -45,13 +45,14 @@ save_json_file('usedQuestions.json', used_questions)
 embed = discord.Embed(
     title="Question of the Day",
     description=random_question,
-    color=0x00ff00,
+    color=0x9900FF,
     timestamp=datetime.now(timezone.utc)
 )
 embed.set_footer(text="Alex's QOTD Bot")
 
 # Define the required intents
 intents = discord.Intents.default()
+intents.messages = True  # Enable message intents
 
 # Discord client with intents
 client = discord.Client(intents=intents)
@@ -59,7 +60,17 @@ client = discord.Client(intents=intents)
 async def post_question():
     await client.wait_until_ready()
     channel = client.get_channel(channel_id)
-    await channel.send(embed=embed)
+
+    # Check and unpin previous messages pinned by the bot
+    pinned_messages = await channel.pins()
+    for message in pinned_messages:
+        if message.author == client.user:
+            await message.unpin()
+
+    # Send the new message and pin it
+    new_message = await channel.send(embed=embed)
+    await new_message.pin()
+
     await client.close()
 
 @client.event
