@@ -20,12 +20,12 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: pip install discord.py python-dotenv
-    # - name: Restore Cache
-    #   uses: actions/cache@v3
-    #   id: cache-used-questions
-    #   with:
-    #     path: usedQuestions.json
-    #     key: used-questions-${{ runner.os }}
+    - name: Restore Cache
+      uses: actions/cache@v3
+      id: cache-used-questions
+      with:
+        path: usedQuestions.json
+        key: used-questions-${{ runner.os }}
     - name: Run QOTD Script
       env:
         DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
@@ -38,13 +38,13 @@ jobs:
         fi
         python qotd_api.py
         cat usedQuestions.json
-    # - name: Delete Current Cache
-    #   if: steps.cache-used-questions.outputs.cache-hit == 'true'
-    #   uses: prantlf/delete-cache-action@v2.0.6
-    #   with:
-    #     key: used-questions-${{ runner.os }}
-    # - name: Cache New usedQuestions.json
-    #   uses: actions/cache@v3
-    #   with:
-    #     path: usedQuestions.json
-    #     key: used-questions-${{ runner.os }}
+    - name: Delete Current Cache
+      if: steps.cache-used-questions.outputs.cache-hit == 'true'
+      uses: prantlf/delete-cache-action@v2.0.6
+      with:
+        key: used-questions-${{ runner.os }}
+    - name: Cache New usedQuestions.json
+      uses: actions/cache@v3
+      with:
+        path: usedQuestions.json
+        key: used-questions-${{ runner.os }}
