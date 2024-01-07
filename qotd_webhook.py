@@ -1,3 +1,5 @@
+#question of the day bot that uses webhook urls to post to your server. 
+#less functionality than using the discord API, but easier to set up.
 import os
 import json
 import random
