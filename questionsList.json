@@ -1,6 +1,7 @@
 {
     "questions": [
         "What's your favorite part about the city or town you live in or have lived in?",
+        "If you could teleport to any place in the world for lunch today, where would you go and what would you eat?",
         "If you could teleport to any place right now, where would you go?",
         "What was the last great story you experienced (book, movie, tv show, game etc)?",
         "If you could collaborate with any artist (dead or alive), who would it be?",
@@ -54,8 +55,6 @@
         "What's your favorite way to spend a day off?",
         "How do you define happiness, and do you think it's achievable?",
         "What's your idea of a perfect day?",
-        "What are your thoughts on the relationship between the mind and the body?",
-        "What do you think is the connection between the mind and the universe?",
         "What's one thing you wish people knew about you?",
         "What song always makes you happy when you hear it?",
         "What's the best gift you've ever received?",
@@ -81,7 +80,6 @@
         "What's a small decision that made a big impact on your life?",
         "If you could talk to animals, which species would you converse with first?",
         "What's a movie or book that left a lasting impression on you?",
-        "In what ways do you think our perception of time affects our understanding of life?",
         "What's a movie or show that always makes you laugh?",
         "If you could witness any event past, present, or future, what would it be?",
         "What's one small change you've made in your life that had a big impact?",
@@ -92,7 +90,6 @@
         "Do you think human consciousness is a product of evolution, or is it something more?",
         "If you could live in any movie universe, which one would you choose?",
         "If you could solve one world problem, what would it be?",
-        "How do you define 'soul,' and do you believe it exists in some form?",
         "What's one skill you wish you could master overnight?",
         "What's a piece of advice you would give to someone starting in your career field?",
         "How do you think the concept of family has evolved, and what does it mean today?",
@@ -131,7 +128,6 @@
         "How do you find meaning in life during times of hardship and uncertainty?",
         "Which fictional world would you NOT want to live in?",
         "If you had to give a TED talk tomorrow, what would it be about?",
-        "What does it mean to be truly self-aware, and is it a state one can achieve?",
         "How do you define a true friendship?",
         "What's something that always makes you nostalgic?",
         "If you could start a new hobby tomorrow, what would it be?",
@@ -152,8 +148,6 @@
         "If you could switch lives with anyone for a day, who would it be?",
         "What's a small act of kindness you recently witnessed or participated in?",
         "How do you like to celebrate your birthday or a special occasion?",
-        "What song or artist do you like to listen to when you need a mood boost?",
-        "If you had unlimited resources, what would you do?",
         "What role do you think suffering plays in human development?",
         "What's a goal you've set for yourself recently?",
         "What's your favorite childhood memory?",
@@ -175,6 +169,6 @@
         "What's your favorite animal and why?",
         "What's a book that you think should be turned into a movie?",
         "What's something you love to do that's also calming?",
-        "How do you think the concept of self is constructed? Is it innate or shaped by external factors?"
+        "What's the most unusual food you've ever tried and would you eat it again?"
     ]
 }
