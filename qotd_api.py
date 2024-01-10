@@ -6,6 +6,7 @@ import random
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 import discord
+from discord import app_commands
 import asyncio
 
 # Load environment variables
@@ -56,8 +57,10 @@ embed.set_footer(text="Alex's QOTD Bot")
 intents = discord.Intents.default()
 intents.messages = True  # Enable message intents
 
+
 # Discord client with intents
 client = discord.Client(intents=intents)
+tree = app_commands.CommandTree(client)
 
 async def post_question():
     await client.wait_until_ready()
