@@ -10,6 +10,9 @@ import asyncio
 
 # Load environment variables
 load_dotenv()
+qotd_footer_text = os.getenv('DISCORD_BOT_FOOTER_TEXT', default="Alex's QOTD Bot")  # Allow footer to be changed so more people can feel the psychological safety needed to contribute to this.
+input_questions_list_file_name = os.getenv('DISCORD_INPUT_QUESTIONS_LIST_FILE_NAME', default="questionsList.json")  # Input questions file
+used_questions_list_file_name = os.getenv('DISCORD_USED_QUESTIONS_LIST_FILE_NAME', default="usedQuestions.json")  # Input questions file
 bot_token = os.getenv('DISCORD_BOT_TOKEN')  # Bot token from the Discord Developer Portal
 channel_id = int(os.getenv('DISCORD_CHANNEL_ID'))  # Channel ID where the bot will post the message
 
@@ -31,8 +34,8 @@ def save_json_file(filename, data):
 load_dotenv()
 
 # Load questions and used questions
-questions = load_json_file('questionsList.json').get('questions', [])
-used_questions = load_json_file('usedQuestions.json')
+questions = load_json_file(input_questions_list_file_name).get('questions', [])
+used_questions = load_json_file(used_questions_list_file_name)
 
 # If all questions have been used, reset the used questions
 if len(used_questions) >= len(questions):
@@ -41,7 +44,7 @@ if len(used_questions) >= len(questions):
 # Choose a question not in used questions
 random_question = random.choice([q for q in questions if q not in used_questions])
 used_questions.append(random_question)
-save_json_file('usedQuestions.json', used_questions)
+save_json_file(used_questions_list_file_name, used_questions)
 
 # Create an embed for the message
 embed = discord.Embed(
@@ -50,7 +53,7 @@ embed = discord.Embed(
     color=0x9900FF,
     timestamp=datetime.now(timezone.utc)
 )
-embed.set_footer(text="Alex's QOTD Bot")
+embed.set_footer(text=qotd_footer_text)
 
 # Define the required intents
 intents = discord.Intents.default()
