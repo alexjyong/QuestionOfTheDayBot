@@ -2,8 +2,6 @@ name: QOTD Scheduler
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 14 * * *'  # 10 AM Eastern Time (UTC -4)
 
 permissions:
   actions: write
@@ -20,31 +18,11 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: pip install discord.py python-dotenv
-    - name: Restore Cache
-      uses: actions/cache@v3
-      id: cache-used-questions
-      with:
-        path: usedQuestions.json
-        key: used-questions-${{ runner.os }}
-    - name: Run QOTD Script
+    - name: Be annoying to Chris
       env:
         DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
         DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
       run: | 
-        if [ -f usedQuestions.json ]; then
-          cat usedQuestions.json
-        else
-          echo "usedQuestions.json does not exist."
-        fi
         python qotd_api.py
-        cat usedQuestions.json
-    - name: Delete Current Cache
-      if: steps.cache-used-questions.outputs.cache-hit == 'true'
-      uses: prantlf/delete-cache-action@v2.0.6
-      with:
-        key: used-questions-${{ runner.os }}
-    - name: Cache New usedQuestions.json
-      uses: actions/cache@v3
-      with:
-        path: usedQuestions.json
-        key: used-questions-${{ runner.os }}
+        python qotd_api.py
+        python qotd_api.py
