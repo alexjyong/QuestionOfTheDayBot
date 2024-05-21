@@ -21,7 +21,7 @@ jobs:
     - name: Be annoying to Chris
       env:
         DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
-        DISCORD_CHANNEL_ID: ${{ secrets.ALTERNATE_CHANNEL }}
+        DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
       run: | 
         python qotd_api.py
         python qotd_api.py
