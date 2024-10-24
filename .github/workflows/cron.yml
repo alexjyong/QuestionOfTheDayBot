@@ -31,6 +31,7 @@ jobs:
         DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
         DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
       run: | 
+        git checkout 2deep4u
         if [ -f usedQuestions.json ]; then
           cat usedQuestions.json
         else
