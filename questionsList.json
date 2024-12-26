@@ -1,5 +1,6 @@
 {
     "questions": [
+        "You are a software engineer working on a self-driving car. The car's algorithms are designed to prioritize the safety of passengers. However, in a split-second decision, the car must choose between hitting a pedestrian and swerving off the road, potentially injuring or killing its passengers. How should the car be programmed to make this decision?",
         "You are offered a high-paying job, but the company is known for its unethical practices. However, you are in need of the higher salary due to various reasons. Do you take the job or turn it down?",
         "You’re on a board for a charity, and a donor offers a huge contribution. However, the donor partakes in practices that are controversial. Do you take the money, knowing that it might signal to others you support it?",
         "Should leaders be held to higher moral standards than ordinary people, even if it limits their privacy?",
