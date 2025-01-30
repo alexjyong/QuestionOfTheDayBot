@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.11
 FROM gorialis/discord.py
 
 RUN mkdir -p /usr/src/bot
