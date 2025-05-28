@@ -1,11 +1,23 @@
 {
-    "questions": [
-        "If you could live any moment from your life again, which would it be and why?",
-        "If you could ask any question to someone from the past, who would it be and what would you ask?",
-        "If you had a whole day where you could do anything you wanted, what would you do?",
-        "Where do you wish you had grown up?",
-        "What is the quality you admire the most in the person you dislike the most?",
-        "What is the most trivial thing about which you have a strong opinion?",
-        "What one thing, whether it's something you did or something you made or something you caused to happen, would you like to be remembered by?"
-    ]
+  "questions": [
+    "What does it mean to truly understand another person?",
+    "In what ways have you changed the most over the last five years?",
+    "When do you feel most yourself?",
+    "What do you think is humanity’s greatest potential?",
+    "What’s something you believe that most people don’t?",
+    "If you could master any skill instantly, what would it be and why?",
+    "How do you personally define success?",
+    "What do you think is the purpose of art?",
+    "What’s a small moment from your life that felt surprisingly profound?",
+    "How do you want to be remembered by those closest to you?",
+    "What role does silence play in your life?",
+    "What kind of legacy do you want to leave behind?",
+    "When was the last time you changed your mind about something important?",
+    "How do you distinguish between fear and intuition?",
+    "What part of your daily routine feels most meaningful to you?",
+    "What’s a question you wish people asked you more often?",
+    "In what situations do you feel the most peace?",
+    "How do your values guide your decisions when no one is watching?",
+    "What’s something you’ve always wanted to explore but haven’t yet?"
+  ]
 }
