@@ -1,9 +1,8 @@
 {
   "questions": [
-    "What book had the most significant impact on your life?",
-    "Do you think you’ve ever encountered a ghost? If so, how does that impact your belief of an afterlife?",
-    "Does social media make you happier or sadder in general? If sadder, why do you keep participating in it?",
-    "Do you really, truly love yourself? Toxic positivity aside, do you think you are worthy of receiving someone else’s love?",
-    "Have you made peace with the way you behaved in past relationships? Have you forgiven yourself?"
+    "You wake up one day and life is a musical. How do you react to this?",
+    "What's the most morally questionable thing you would do for a lot of money?",
+    "What would your role be in the zombie apocalypse? (You cannot say you'll opt-out. You are stuck here and have to do something.)",
+    "What are some other questions you want for this bot? Please help me. I'm running out of ideas and the LLMs ones are getting stale."
   ]
 }
