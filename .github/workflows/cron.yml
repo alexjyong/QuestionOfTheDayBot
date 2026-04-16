@@ -2,8 +2,8 @@ name: QOTD Scheduler
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 14 * * *'  # 10 AM Eastern Time (UTC -4)
+  # schedule:
+  #   - cron: '0 14 * * *'  # 10 AM Eastern Time (UTC -4)
 
 permissions:
   actions: write
